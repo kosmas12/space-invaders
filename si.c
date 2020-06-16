@@ -2,9 +2,13 @@
 //some times the bullet wont go past through a base if it hits on the far left edge. cause unknowen
 //its the same bug that i found in my invaders drawing code. using the objects own hitbox as the SDL_Rect
 //as the destination rectangle to blit to. using a seperate local rect in the drawing code solves it.
+
+#if defined (NXDK)
+#include <windows.h>
+#endif
 #include <stdlib.h>
 #include <stdio.h>
-#include "SDL/SDL.h"
+#include <SDL2/SDL.h>
 
 #define SCREEN_WIDTH 800 
 #define SCREEN_HEIGHT 600
